@@ -18,7 +18,11 @@ The key design rule is simple: **the standard program decides where the elevator
 <!-- GITHUB INLINE VIDEO: edit this README on github.com and drag Elevator_Automatic_Safety_Demo.mp4 directly below this comment. -->
 <p align="center"><strong>Full automatic-cycle demonstration</strong></p>
 
-https://github.com/user-attachments/assets/c0e6d334-c111-4895-a2c8-e18fef086c7b
+
+
+https://github.com/user-attachments/assets/34530057-41ca-4256-9606-748a1b5c5405
+
+
 
 
 **Engineering stack:** `TIA Portal V20` · `CPU 1511F-1 PN` · `SIMATIC Safety` · `WinCC Unified` · `SCL/LAD/FBD` · `UDT/DB architecture` · `ET 200SP F-I/O` · `PROFINET` · `PROFIsafe` · `PLCSIM` · `structured FAT`
