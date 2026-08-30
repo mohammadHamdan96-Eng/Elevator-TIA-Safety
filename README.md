@@ -16,7 +16,7 @@ The key design rule is simple: **the standard program decides where the elevator
 <p align="center"><strong>WinCC / PLCSIM sequence preview</strong></p>
 
 <!-- GITHUB INLINE VIDEO: edit this README on github.com and drag Elevator_Automatic_Safety_Demo.mp4 directly below this comment. -->
-
+<p align="center"><strong>Full automatic-cycle demonstration</strong></p>
 
 https://github.com/user-attachments/assets/c0e6d334-c111-4895-a2c8-e18fef086c7b
 
