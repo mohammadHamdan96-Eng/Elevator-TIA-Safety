@@ -17,6 +17,10 @@ The key design rule is simple: **the standard program decides where the elevator
 
 <!-- GITHUB INLINE VIDEO: edit this README on github.com and drag Elevator_Automatic_Safety_Demo.mp4 directly below this comment. -->
 
+
+https://github.com/user-attachments/assets/c0e6d334-c111-4895-a2c8-e18fef086c7b
+
+
 **Engineering stack:** `TIA Portal V20` · `CPU 1511F-1 PN` · `SIMATIC Safety` · `WinCC Unified` · `SCL/LAD/FBD` · `UDT/DB architecture` · `ET 200SP F-I/O` · `PROFINET` · `PROFIsafe` · `PLCSIM` · `structured FAT`
 
 **Quick access:** [FAT report](docs/Elevator_FAT_Validation_Report.pdf) · [Architecture](docs/ARCHITECTURE.md) · [Safety architecture](docs/SAFETY_ARCHITECTURE.md) · [Block reference](docs/PLC_BLOCK_REFERENCE.md) · [Source excerpts](plc-excerpts/README.md) · [Traceability](docs/ENGINEERING_TRACEABILITY.md) · [PLCSIM guide](docs/RUNNING_IN_PLCSIM.md) · [TIA archive / Releases](https://github.com/mohammadHamdan96-Eng/Elevator-TIA-Safety/releases/latest)
