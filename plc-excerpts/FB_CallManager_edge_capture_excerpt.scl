@@ -1,0 +1,44 @@
+// FB_CallManager [FB1] — representative excerpt from the retained TIA Portal V20 implementation.
+// Excerpt only: edge calculation and single-owner call capture.
+
+// Calculate edges before updating the previous-state memories.
+FOR #idx := 0 TO 4 DO
+    #tmpCarEdge[#idx] :=
+        #iCommand.CarButton[#idx] AND NOT #stCarOld[#idx];
+END_FOR;
+
+FOR #idx := 0 TO 3 DO
+    #tmpHallUpEdge[#idx] :=
+        #iCommand.HallUpButton[#idx] AND NOT #stHallUpOld[#idx];
+END_FOR;
+
+FOR #idx := 1 TO 4 DO
+    #tmpHallDownEdge[#idx] :=
+        #iCommand.HallDownButton[#idx] AND NOT #stHallDownOld[#idx];
+END_FOR;
+
+// Call Manager remains the only owner of stored-call memory.
+"FC_ClearServedRequest"(
+    iClear  := #iClearRequest,
+    ioCalls := #stCalls
+);
+
+IF #iEnable AND #iPassengerCallsEnabled THEN
+    FOR #idx := 0 TO 4 DO
+        IF #tmpCarEdge[#idx] THEN
+            #stCalls.CarCall[#idx] := TRUE;
+        END_IF;
+    END_FOR;
+
+    FOR #idx := 0 TO 3 DO
+        IF #tmpHallUpEdge[#idx] THEN
+            #stCalls.HallUpCall[#idx] := TRUE;
+        END_IF;
+    END_FOR;
+
+    FOR #idx := 1 TO 4 DO
+        IF #tmpHallDownEdge[#idx] THEN
+            #stCalls.HallDownCall[#idx] := TRUE;
+        END_IF;
+    END_FOR;
+END_IF;

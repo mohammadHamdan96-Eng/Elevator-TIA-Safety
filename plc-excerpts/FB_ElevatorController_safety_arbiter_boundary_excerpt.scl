@@ -1,0 +1,25 @@
+// FB_ElevatorController [FB7] — representative excerpt from the retained TIA Portal V20 implementation.
+// Excerpt only: standard movement-permissive evaluation followed by the single final-command writer.
+
+"FC_SafetyEvaluation"(
+    iEmergencyActive   := #iCommand.EmergencySim,
+    iFaultActive       := #stAlarm.FaultActive,
+    iMaintenanceActive := #stMaintenanceActive,
+    iFeedback          := #iFeedback,
+    iAutoCmd           := #stAutoCmd,
+    iMaintCmd          := #stMaintCmd,
+    oSafety            => #stSafety
+);
+
+"FC_OutputArbiter"(
+    iAutoActive       := #stAutoExecutionEnabled,
+    iMaintenanceActive := #stMaintenanceActive,
+    iEmergencyActive  := #iCommand.EmergencySim,
+    iFaultActive      := #stAlarm.FaultActive,
+    iFeedback         := #iFeedback,
+    iSafety           := #stSafety,
+    iSafeMotionEnable := #iSafeMotionEnable,
+    iAutoCmd          := #stAutoCmd,
+    iMaintCmd         := #stMaintCmd,
+    oFinalCmd         => #stFinalCmd
+);

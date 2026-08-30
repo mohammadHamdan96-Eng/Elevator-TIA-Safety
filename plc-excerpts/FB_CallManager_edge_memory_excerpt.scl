@@ -1,0 +1,31 @@
+// FB_CallManager [FB1] — representative excerpt from the retained TIA Portal V20 implementation.
+// Excerpt only: maintenance clearing and previous-state memory update.
+
+// Confirmed Maintenance entry has priority over every capture.
+IF #iClearAll THEN
+    FOR #idx := 0 TO 4 DO
+        #stCalls.CarCall[#idx] := FALSE;
+    END_FOR;
+
+    FOR #idx := 0 TO 3 DO
+        #stCalls.HallUpCall[#idx] := FALSE;
+    END_FOR;
+
+    FOR #idx := 1 TO 4 DO
+        #stCalls.HallDownCall[#idx] := FALSE;
+    END_FOR;
+END_IF;
+
+// Always update edge memories, even while calls are disabled. A button
+// held during Maintenance therefore cannot become a false new edge.
+FOR #idx := 0 TO 4 DO
+    #stCarOld[#idx] := #iCommand.CarButton[#idx];
+END_FOR;
+
+FOR #idx := 0 TO 3 DO
+    #stHallUpOld[#idx] := #iCommand.HallUpButton[#idx];
+END_FOR;
+
+FOR #idx := 1 TO 4 DO
+    #stHallDownOld[#idx] := #iCommand.HallDownButton[#idx];
+END_FOR;
