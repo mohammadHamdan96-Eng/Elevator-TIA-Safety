@@ -697,7 +697,7 @@ It does **not** claim a certified passenger-elevator controller, a validated SIL
 
 ## Related work
 
-- [ThreeTank — Siemens TIA Portal process automation](https://github.com/mohammadHamdan96-Eng/mohammadHamdan96-Eng-ThreeTank-TIA-Automation)
+- [ThreeTank — Siemens TIA Portal process automation](https://github.com/mohammadHamdan96-Eng/ThreeTank-TIA-Automation)
 - [Five-Floor Elevator — CODESYS baseline](https://github.com/mohammadHamdan96-Eng/FiveFloor-Elevator-CODESYS)
 
 ## Author
